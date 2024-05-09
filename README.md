@@ -9,17 +9,17 @@ Currently, only the following platforms are supported :
 * Windows x86
 * Windows x64
 
-The code is easy to understand, documented and unit tested. If you want to contribute, please get in touch if you need help, contributions are really welcome (especially new platforms support !).
+The code is easy to understand, documented and unit tested. If you want to contribute, please get in touch if you need help. Contributions are really welcome (especially new platforms support!).
 
 # Installation
 
 You can download the latest available JAR, including all-supported platforms on the [releases](https://github.com/thibautd/JSerial/releases) page.
 
-If you want to build from source, you will need gradle. Simply run ``gradle installDist`` in the ``JSerial`` directory to generate a jar file.
+If you want to build from source, you will need gradle. Simply run `gradle installDist` in the `JSerial` directory to generate a jar file.
 
-Please note that JSerial uses [JNA](https://github.com/java-native-access/jna) (Java Native Access) to make native functions calls.
+Please note that JSerial requires [JNA](https://github.com/java-native-access/jna) (Java Native Access) to make native functions calls.
 
-**Windows Users :** The native DLL has been compiled with Visual Studio 2015, so you needto install [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-US/download/details.aspx?id=48145) ! Don't forget to install it, else it will not work.
+**Windows Users :** The native DLL has been compiled with Visual Studio 2015, so you need to install [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-US/download/details.aspx?id=48145)! Don't forget to install it, otherwise it will not work.
 
 # Features
 
@@ -50,7 +50,7 @@ SerialPort port = SerialPort.open("COM2");
 
 // Configure the connection
 port.setTimeout(100);
-port.setConfig(BaudRate.B115200, Parity.NONE, StopBits.ONE, DataBits.B8);
+port.setConfig(BaudRate.B115200, Parity.NONE, StopBits.ONE, DataBits.D8);
 
 // You have the choice, you can either use the Java NIO channels
 // or classic Input/Ouput streams to read and write data.
